@@ -1,0 +1,85 @@
+{% extends "main/base.html" %}
+{% load static%}
+
+
+
+
+
+{%block content%}
+<div class="card mb-3" style="max-width: 1000px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static "deps/images/standart.webp" %}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Страндарт</h5>
+          <p class="card-text"><li>Площадь от 23 до 32 кв.м.</li>
+            <li>Удобная кровать King Size 160*200 см</li>
+        <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+        <li>Халат, тапочки, индивидуальные принадлежности</li>
+        <li>Чай, кофе, вода комплиментом</li>
+        <li>Санузел с ванной или душевой кабиной</li>
+        <li>Быстрый Wi-Fi</li></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<form>
+							
+							<div class="col-md-2">
+								<div class="form-group">
+                                    <span class="form-label">Количество взрослых</span>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+									<span class="select-arrow"></span>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-group">
+                                    <span class="form-label">Количество детей</span>
+									<select class="form-control">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+									<span class="select-arrow"></span>					
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+                                    <span class="form-label">Заезд</span>
+									<input class="form-control" type="date" required>									
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+                                    <span class="form-label">Выезд</span>
+									<input class="form-control" type="date" required>						
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-btn">
+                                    <span class="form-label"></span>
+									<button type="button" class="btn btn-primary">Забронировать</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    {%endblock%}

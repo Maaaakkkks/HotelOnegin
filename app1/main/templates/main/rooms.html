@@ -1,0 +1,144 @@
+{% extends "main/base.html" %}
+{% load static%}
+
+
+
+{% block css%}<link rel="stylesheet" href="{% static "deps/styles/style_booking.css" %}">{% endblock%}
+
+
+{% block content%}
+<!-- Номер 1  -->
+    <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "deps/images/standart.webp" %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Стандартный номер</h5>
+              <p class="card-text"><li>Площадь от 23 до 32 кв.м.</li>
+                <li>Удобная кровать King Size 160*200 см</li>
+            <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+            <li>Халат, тапочки, индивидуальные принадлежности</li>
+            <li>Чай, кофе, вода комплиментом</li>
+            <li>Санузел с ванной или душевой кабиной</li>
+            <li>Быстрый Wi-Fi</li></p>
+            <a href="{% url "booking:booking1"  %}"><input type="change" value="Забронировать"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Номер 2 -->
+      <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "deps/images/studio.webp" %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Студия</h5>
+              <p class="card-text"><li>Площадь от 30 до 42 кв.м.</li>
+                <li>Удобная кровать King Size 160*200 см</li>
+            <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+            <li>Халат, тапочки, индивидуальные принадлежности</li>
+            <li>Чай, кофе, вода комплиментом</li>
+            <li>Капсульная кофемашина</li>
+            <li>Санузел с гидромассажной ванной и душевой кабиной</li>
+            <li>Быстрый Wi-Fi</li></p>
+            <a href="{% url "booking:booking2"  %}"><input type="change" value="Забронировать"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Номер 3 -->
+      <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "deps/images/lux.webp" %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Люкс</h5>
+              <p class="card-text"><li>Площадь от 41 до 54 кв.м.</li>
+                <li>Удобная кровать King Size 160*200 см или 180*200см</li>
+            <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+            <li>Халат, тапочки, индивидуальные принадлежности</li>
+            <li>Чай, кофе, вода комплиментом</li>
+            <li>Капсульная кофемашина</li>
+            <li>Санузел с гидромассажной ванной и душевой кабиной</li>
+            <li>В номере аккуратные кресла и удобный столик</li></p>
+            <a href="{% url "booking:booking3"  %}"><input type="change" value="Забронировать"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Номер 4 -->
+      <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "deps/images/romantic.webp" %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Романтик</h5>
+              <p class="card-text"><li>Площадь от 50 до 55 кв.м.</li>
+                <li>Удобная кровать King Size 160*200 см</li>
+            <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+            <li>Музыкальный центр</li>
+            <li>Халат, тапочки, индивидуальные принадлежности</li>
+            <li>Чай, кофе, вода комплиментом</li>
+            <li>Капсульная кофемашина</li>
+            <li>Санузел с джакузи и душевой кабиной</li>
+            <li>В номере аккуратные кресла и удобный столик</li></p>
+            <a href="{% url "booking:booking4"  %}"><input type="change" value="Забронировать"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Номер 5 -->
+      <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "deps/images/bisnes.webp" %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Бизнес-люкс</h5>
+              <p class="card-text"><li>Двухкомнатный номер площадью 57 кв.м.</li>
+                <li>Удобная кровать King Size 180*200см</li>
+                <li>Гостиная площадью 30 кв.м. с большим круглым столом для переговоров, рабочей зоной и зоной отдыха с панорамным видом на центр города</li>
+                <li>Спальная зона площадью 18 кв.м. с превосходным панорамным видом на центр Екатеринбурга</li>
+            <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+            <li>Халат, тапочки, индивидуальные принадлежности</li>
+            <li>Чай, кофе, вода комплиментом</li>
+            <li>Капсульная кофемашина</li>
+            <li>Санузел с гидромассажной ванной и душевой кабиной</li>
+            <li>В номере аккуратные кресла и удобный столик</li></p>
+            <a href="{% url "booking:booking5"  %}"><input type="change" value="Забронировать"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Номер 6 -->
+      <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static "deps/images/premlux.webp" %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Премьер-люкс</h5>
+              <p class="card-text"><li>Просторные 2-х комнатные номера с двумя спальнями и площадью от 88 кв.м.</li>
+                <li>Удобная кровать King Size 180*200см</li>
+            <li>Телевизор, телефон, мини-бар, сейф, фен</li>
+            <li>Халат, тапочки, индивидуальные принадлежности</li>
+            <li>Чай, кофе, вода комплиментом</li>
+            <li>Капсульная кофемашина</li>
+            <li>Шикарная ванная комната с колоннами, гидромассажной ванной и душевой кабиной</li>
+            <li>В номере аккуратные кресла и удобный столик</li></p>
+            <a href="{% url "booking:booking6"  %}"><input type="change" value="Забронировать"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+{%endblock%}

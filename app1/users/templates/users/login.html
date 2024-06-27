@@ -1,0 +1,31 @@
+{% extends "main/base.html" %}
+{% load static%}
+
+
+{% block css%}
+  <link rel="stylesheet" href="{% static "deps/styles/style_reg.css" %}">
+  {% endblock%}
+
+{%block content%}
+  <div class="container">
+    <h2>Вход в аккаунт</h2>
+    <form action="{% url "users:login" %}" method="post">
+      {% csrf_token %}
+      
+        <label for="{{form.username.id_for_lable}}">Имя пользователя:</label>
+        {{form.username}}
+
+        {% comment %} <label for="{{form.password.id_for_lable}}" type="password">Пароль:</label>
+        {{form.password}} {% endcomment %}
+
+      {% comment %} <label for="id_username">username:</label>
+      <input type="username"  class='formm_controll' id="username" name="username" placeholder="Ваша username.." required> {% endcomment %}
+
+      <label for="id_password">password:</label>
+      <input type="password" class='formm_controll' id="password" name="password" placeholder="Ваш пароль.." required>
+
+      <input type="submit" value="Войти">
+      <a href="{% url "users:registration"%}"><input type="change" value="Создать аккаунт"></a>
+    </form>
+  </div>
+{%endblock%}

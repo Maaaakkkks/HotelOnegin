@@ -1,0 +1,13 @@
+input[type="change"] {
+    background-color: #198efc;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="change"]:hover {
+    background-color: #00538a;
+  }

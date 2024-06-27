@@ -1,0 +1,95 @@
+{% extends "main/base.html" %}
+{% load static%}
+
+
+{% block css%}
+<link rel="stylesheet" href="{% static "deps/styles/css/my_css.css" %}">
+  {% endblock%}
+
+{%block content%}
+<div class="col-md-12" >
+    <div class=" bg-white p-4 mb-4 mx-2 rounded custom-shadow">
+        <h3 class="text-center mb-4">Профиль пользователя</h3>
+        <form>
+            {% csrf_token %}
+            <div class="row" >
+                <div class="col-md-12 mb-3 text-center">
+                    
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="id_first_name" class="form-label">Имя*</label>
+                    <input type="text" class="form-control" id="id_first_name" name="id_first_name"
+                        placeholder="Введите ваше имя" value="{{form.first_name.value}}" required>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="id_lust_name" class="form-label">Фамилия*</label>
+                    <input type="text" class="form-control" id="id_lust_name" name="id_lust_name"
+                        placeholder="Введите вашу фамилию" value="{{form.lust_name.value}}" required>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="id_username" class="form-label">Имя пользователя*</label>
+                    <input type="text" class="form-control" id="id_username" name="id_username"
+                        placeholder="Введите ваше имя пользователя" value="{{form.username.value}}" required>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="id_email" class="form-label">Email*</label>
+                    <input type="email" class="form-control" id="id_email" name="id_email"
+                        placeholder="Введите ваш email *youremail@example.com" value="{{form.email.value}}"
+                        required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark">Изменить</button>
+        </form>
+    </div>   
+</div>
+
+
+
+<div class="col-md-12">
+    <div class=" bg-white p-4 mb-4 mx-2 rounded custom-shadow">
+        <h3 class="text-center mb-4">Активные брони</h3>
+        <!-- Брони -->
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading1">
+                        <div class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <div>Название комнаты</div>
+                            <div style="margin-left: 350px;">Дата бронирования: 124.54.2304</div>
+                        </div>
+
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                        <div class="col-md-12 mb-3">
+                            <label for="id_person" class="form-label">Количество взрослых</label>
+                            <input type="text" class="form-control" id="id_person" name="id_person"
+                                placeholder="Введите ваш email *youremail@example.com" value="{{form.person.value}}"
+                                required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="id_childe" class="form-label">Количество детией</label>
+                            <input type="text" class="form-control" id="id_childe" name="id_childe"
+                                placeholder="Введите ваш email *youremail@example.com" value="{{form.childe.value}}"
+                                required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="id_date_in" class="form-label">Дата заезда</label>
+                            <input type="date" class="form-control" id="id_childe" name="id_childe"
+                                placeholder="Введите ваш email *youremail@example.com" value="{{form.childe.value}}"
+                                required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="id_date_out" class="form-label">Дата выезда</label>
+                            <input type="date" class="form-control" id="id_email" name="id_email"
+                                placeholder="Введите ваш email *youremail@example.com" value="{{form.date_out.value}}"
+                                required>
+                        </div>
+                        <button id="cancel">Отменить бронь</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{%endblock%}
